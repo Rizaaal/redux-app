@@ -8,7 +8,20 @@ import { useRef } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const counter = {
+  display: 'flex',
+  justifyContent: 'space-evenly',
+  width: '40%',
+  fontSize: '3em'
+}
+
 export default function Home() {
+  //in react-redux, per usare il dispatch abbiamo questo hook:
+  const dispatch = useDispatch();
+  // vedi CounterSlice.ts linea 30
+  const count = useSelector(selectCount)
+  const inputRef = useRef<HTMLInputElement>(null);
+
   return (
     <>
       <Head>
