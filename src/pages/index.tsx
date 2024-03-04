@@ -54,7 +54,7 @@ export default function Home() {
 
 
         </section>
-        <input type="text" ref={inputRef} />
+        <input type="number" ref={inputRef} />
       </main>
     </>
   );
