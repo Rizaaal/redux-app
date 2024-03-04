@@ -35,14 +35,6 @@ export default function Home() {
         <p>The state of the counter is managed with Redux.</p>
         <section style={counter}>
 
-          <button 
-          onClick={() => dispatch(increment(Number(inputRef?.current?.value)))}
-          style={{padding: '1em'}}
-          >
-            +
-          </button>
-
-          <p>{count}</p>
 
           <button 
           onClick={() => dispatch(decrement(Number(inputRef?.current?.value)))}
@@ -50,6 +42,16 @@ export default function Home() {
           >
             -
           </button>
+
+          <p>{count}</p>
+
+          <button 
+          onClick={() => dispatch(increment(Number(inputRef?.current?.value)))}
+          style={{padding: '1em'}}
+          >
+            +
+          </button>
+
 
         </section>
         <input type="text" ref={inputRef} />
